@@ -1,0 +1,98 @@
+.box{
+    width: 100%;
+
+}
+.pricingTable{
+    color: #666;
+    background: radial-gradient(#fff,#eee);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 0 0 20px;
+    width: 250px;
+    // gap: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.pricingTable .pricingTable-header{ padding: 18px 0 5px; }
+.pricingTable .title{
+    color: #263C5C;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+}
+.pricingTable .price-value{
+    color: #fff;
+    background: linear-gradient(to right,#B231EA,#7734EE);
+    padding: 2px 30px 2px;
+    margin: 0 0 15px; 
+    border-radius: 10px;
+    display: inline-block;
+}
+.pricingTable .price-value .amount{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 57px;
+}
+.pricingTable .pricing-content{
+    text-align: left;
+    padding: 0;
+    margin: 0 0 30px;
+    list-style: none;
+    display: inline-block;
+}
+.pricingTable .pricing-content li{
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 10px 0 28px;
+    margin: 0 0 10px;
+    position: relative;
+}
+.pricingTable .pricing-content li:last-child{ margin: 0; }
+.pricingTable .pricing-content li:before{
+    content: "";
+    background: linear-gradient(to right,#B231EA,#7734EE);
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 11px;
+    left: 0;
+}
+.pricingTable .pricing-content li.disable:before{ display: none; }
+.pricingTable .pricingTable-signup button{
+    color: #fff;
+    background: linear-gradient(to right,#4A63A6,#2C3B6A);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 8px 25px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+// .pricingTable .pricingTable-signup button:hover{
+//     color: #fff;
+//     background: linear-gradient(to right,#2C3B6A,#253259);
+//     font-size: 20px;
+//     font-weight: 700;
+//     text-transform: capitalize;
+//     padding: 8px 25px 10px;
+//     border-radius: 50px;
+//     display: inline-block;
+//     transition: all 0.3s;
+// }
+.pricingTable .pricingTable-signup button:hover{ text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5); }
+.pricingTable.blue .price-value,
+.pricingTable.blue .pricing-content li:before{ background: linear-gradient(to right,#48CDED,#5151EC); }
+.pricingTable.green .price-value,
+.pricingTable.green .pricing-content li:before{ background: linear-gradient(to right,#B1D075,#20AB74); }
+.pricingTable.gold .price-value,
+.pricingTable.gold .pricing-content li:before{ background: linear-gradient(to right,#fae73e,#f67437); }
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin: 0 0 40px; }
+}
