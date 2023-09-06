@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 import "../styles/Pricing.scss";
 import axios from "axios";
-import LogoBrand from "../images/logoBrand.png";
 export default function Pricing() {
   const checkoutHandler = async (amount) => {
     const { data:{key} } = await axios.get("http://localhost:4000/api/getKey")
