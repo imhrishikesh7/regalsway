@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import PaymentSuccess from './components/PaymentSuccess';
 import Pricing from './components/Pricing';
-import Projects from './components/Projects';
 import Services from './components/Services';
 import Home from './components/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
