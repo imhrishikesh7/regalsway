@@ -1,7 +1,9 @@
 import { instance } from "../server.js";
 import crypto from "crypto";
 import { Payment } from "../models/paymentModel.js"
+
 export const checkout = async (req, res) => {
+try {
   const options = {
     amount: Number(req.body.amount * 100),
     currency: "INR",
@@ -10,10 +12,19 @@ export const checkout = async (req, res) => {
   res.status(200).json({
     success: true,
     order,
+  }); 
+}
+ catch (error) {
+  console.error("Checkout error:", error);
+  res.status(500).json({
+    success: false,
+    error: "Error creating Razorpay order",
   });
+}
 };
 
 export const paymentVerification = async (req, res) => {
+  try{
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
     req.body;
 
@@ -39,7 +50,15 @@ export const paymentVerification = async (req, res) => {
   else{
     res.status(400).json({
       success: false,
+      error: "Payment verification failed",
     });
   }
-  
+ }
+ catch (error) {
+  console.error("Payment verification error:", error);
+  res.status(500).json({
+    success: false,
+    error: "Error verifying payment",
+  });
+}
 };
