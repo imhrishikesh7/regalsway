@@ -5,9 +5,23 @@ import axios from "axios";
 export default function Pricing() {
   const checkoutHandler = async (amount) => {
     const { data:{key} } = await axios.get("http://localhost:4000/api/getKey")
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
     const { data:{order} } = await axios.post("http://localhost:4000/api/checkout", {
     amount
+    })
+        .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
     });
+
 
     const options = {
       key, 
