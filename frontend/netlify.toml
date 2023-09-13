@@ -12,5 +12,4 @@
     status = 200
 
 [functions]
-  external_node_modules = ["package-1"]
-  included_files = ["files/*.md"]
+directory = "frontend/functions"
