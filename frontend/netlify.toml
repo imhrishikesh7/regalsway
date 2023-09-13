@@ -12,4 +12,4 @@
     status = 200
 
 [functions]
-directory = "frontend/src"
+directory = "regalsway/frontend"
