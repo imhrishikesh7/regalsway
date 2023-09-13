@@ -1,3 +1,4 @@
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,3 +14,4 @@
 
 [functions]
 directory = "regalsway/frontend"
+runtime = "nodejs14.x"
