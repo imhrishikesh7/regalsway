@@ -13,4 +13,4 @@
 
 [functions]
 directory = "frontend/src"
-runtime = "nodejs14.x"
+runtime = "nodejs16.x"
