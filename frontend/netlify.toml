@@ -13,4 +13,3 @@
 
 [functions]
 directory = "frontend/src"
-runtime = "nodejs16.x"
