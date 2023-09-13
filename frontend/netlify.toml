@@ -14,4 +14,3 @@
 
 [functions]
 directory = "regalsway/frontend"
-runtime = "nodejs14.x"
