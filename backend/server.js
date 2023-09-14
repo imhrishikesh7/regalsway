@@ -2,14 +2,7 @@ import Razorpay from "razorpay";
 import { app } from "./app.js";
 import { connectDB } from "./config/database.js";
 
-connectDB()
-.then(() => {
-  console.log("Mongo DB connection successful");
-})
-.catch((error) => {
-  console.error("Mongo DB connection error:", error);
-});
-
+connectDB();
 
 if (!process.env.RAZORPAY_API_KEY || !process.env.RAZORPAY_API_SECRET) {
   console.error("Razorpay API key and/or secret not defined in environment variables.");
