@@ -55,20 +55,6 @@ export default function Services() {
                 engineers to build up your trading strategy
               </p>
             </div>
-            <div className="col">
-              <h6>SOFTWARE DEVELOPMENT SERVICES</h6>
-              <p style={{ textAlign: "justify" }}>
-                Today’s world is all about “Innovation or persuasion” and the
-                same is applicable across industries, including IT sector.
-              </p>
-            </div>
-            <div className="col">
-              <h6>WORDPRESS WEBSITE DESIGNING</h6>
-              <p style={{ textAlign: "justify" }}>
-                We’re a trusted and results-driven WordPress website design
-                company. Managing your website should be simple....
-              </p>
-            </div>
           </div>
         </div>
       </div>
