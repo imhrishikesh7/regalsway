@@ -14,7 +14,7 @@ export default function ContactUs() {
       <div  className="container my-5" >
         <div  className="row justify-content-center">
           <div  className="col-lg-9 ">
-            <form action="https://formsubmit.co/info@regalsway.com" method="POST">
+            <form action="https://formsubmit.co/info@regalsway.in" method="POST">
               
               <input type="text" name="_honey" style={{display:"none"}} />
               <input type="hidden" name="_captcha" value={"false"} />
