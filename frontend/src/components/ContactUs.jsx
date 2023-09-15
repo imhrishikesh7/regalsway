@@ -57,14 +57,15 @@ export default function ContactUs() {
                   />
                 </div>
                 <div  className="col-md-6">
-                  <label  htmlFor="your-subject"  className="form-label">
-                    Subject
+                  <label  htmlFor="your-number"  className="form-label">
+                    Mobile number
                   </label>
                   <input
-                    type="text"
-                     className="form-control"
-                    id="your-subject"
-                    name="Subject"
+                    type="tel"
+                    format="[0-9]{10}"
+                    className="form-control"
+                    id="your-number"
+                    name="Mobile&nbsp;Number"
                   />
                 </div>
                 <div  className="col-12">
