@@ -49,15 +49,4 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/imhrishikesh7/regalsway.git"
-},
-"author": "",
-"license": "ISC",
-"bugs": {
-    "url": "https://github.com/imhrishikesh7/regalsway/issues"
-},
-"homepage": "https://github.com/imhrishikesh7/regalsway#readme"
-}
+  }}
