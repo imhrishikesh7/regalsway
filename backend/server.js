@@ -1,8 +1,9 @@
 import Razorpay from "razorpay";
 import { app } from "./app.js";
-import { connectDB } from "./config/database.js";
+// import { connectDB } from "./config/database.js";
 
-connectDB();
+// connectDB()
+
 
 if (!process.env.RAZORPAY_API_KEY || !process.env.RAZORPAY_API_SECRET) {
   console.error("Razorpay API key and/or secret not defined in environment variables.");

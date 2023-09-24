@@ -25,6 +25,7 @@ app.get("/api/getKey", (req, res) =>{
 app.use((err, req, res, next) => {
     console.error(err);
     res.status(500).json({ error: "Internal Server Error" });
+    next();
   });
   
   
