@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SebiCircular() {
   return (
-    <div className="container">
+    <div className="container container-fluid">
       <h1 className="display-6 container mt-5">SEBI Circular for Algorithm Companies</h1>
       <h2>SEBI/HO/MIRSD/DOP/P/CIR/2022/117</h2>
       <p>
@@ -10,7 +10,7 @@ export default function SebiCircular() {
       </p>
       <h3 className='text-primary'>SEBI CIRCULAR September 02, 2022</h3>
 
-      <ol class="order-list primary-color text-justify">
+      <ol className="order-list primary-color text-justify">
             <li> It has come to the notice of the Securities and Exchange Board of India (SEBI) that some unregulated platforms are offering algorithmic trading services/strategies to investors for automated execution of trades. Such services and strategies are being marketed with “claims” of high returns on investment. Further, “ratings” have been assigned to the strategies, which could lead to investors being lured by such claims. This may amount to mis-selling of such services and strategies to investors.
 
             </li>

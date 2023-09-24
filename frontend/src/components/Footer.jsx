@@ -56,37 +56,37 @@ export default function Footer() {
 
                 <ul className="list-unstyled">
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>API Bridge
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Algo Trading
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Auto Buy and Sell Signals
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Strategy Deployment
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Software Services
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Wrodpress Website Services
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Volunteer activities
                     </a>
                   </li>
@@ -97,12 +97,12 @@ export default function Footer() {
 
                 <ul className="list-unstyled">
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>Home
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!" className="text-white">
+                    <a href="/" className="text-white">
                       <i className="fas fa-paw pe-3"></i>About
                     </a>
                   </li>
@@ -134,7 +134,7 @@ export default function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <p>
-                      <i className="fas fa-map-marker-alt pe-2"></i>RegalSway head office, 
+                      <i className="fas fa-map-marker-alt pe-2"></i>Regalsway office, 
                       Vijay nagar, Indore
                     </p>
                   </li>
@@ -146,7 +146,7 @@ export default function Footer() {
                   <li>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@regalsway.com
+                      info@regalsway.in
                     </p>
                   </li>
                 </ul>

@@ -14,7 +14,7 @@ export default function ContactUs() {
       <div  className="container my-5" >
         <div  className="row justify-content-center">
           <div  className="col-lg-9 ">
-            <form action="https://formsubmit.co/a2cf695ceca0c2b8f0e5ea751a7fa769" method="POST">
+            <form action="https://formsubmit.co/info@regalsway.com" method="POST">
               
               <input type="text" name="_honey" style={{display:"none"}} />
               <input type="hidden" name="_captcha" value={"false"} />
@@ -58,12 +58,11 @@ export default function ContactUs() {
                 </div>
                 <div  className="col-md-6">
                   <label  htmlFor="your-number"  className="form-label">
-                    Mobile number
+                    Mobile Number
                   </label>
                   <input
-                    type="tel"
-                    format="[0-9]{10}"
-                    className="form-control"
+                    type="text"
+                     className="form-control"
                     id="your-number"
                     name="Mobile&nbsp;Number"
                   />

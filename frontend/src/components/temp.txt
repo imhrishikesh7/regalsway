@@ -1,0 +1,109 @@
+try{ 
+    const { data:{key} } = await axios.get("http://localhost:4000/api/getKey")
+    
+    const { data:{order} } = await axios.post("http://localhost:4000/api/checkout", {
+    amount
+    })
+    
+    const options = {
+      key, 
+      amount: order.amount, 
+      currency: "INR",
+      name: "RegalSway",
+      description: "Test Transaction",
+      image: "../images/second.png",
+      order_id: order.id, 
+      callback_url: "http://localhost:4000/api/paymentverification",
+      prefill: {
+        name: userData.name,
+        email: userData.email,
+        contact: userData.contact,
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3b3b3b",
+      },
+    };
+    const razor = new window.Razorpay(options);
+      razor.open();
+     }catch (error) {
+      console.error("Error during checkout:", error);
+      // You can handle errors here, such as displaying an error message to the user.
+    }
+
+
+
+
+
+
+     "repository": {
+        "type": "git",
+        "url": "git+https://github.com/imhrishikesh7/regalsway.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/imhrishikesh7/regalsway/issues"
+    },
+    "homepage": "https://github.com/imhrishikesh7/regalsway#readme"
+
+
+
+
+{
+  "name": "regalsway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "regalsway is an algo trading website for a advisory firm",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "sass": "^1.66.0",
+    "styled-components": "^6.0.7",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+
+

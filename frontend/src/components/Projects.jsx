@@ -5,23 +5,28 @@ import React from 'react'
 
 export default function Projects() {
     let projectImg={
-        height: "55vh",
-        width: "28vw",
         objectFit: "contain",
-        filter: "brightness(0.6)"
+        filter: "brightness(0.4)"
     }
-    // let fullBoxProjectImg={
-    //     width: "90vw",
-    //     height: "50vh"
-    // }
+
   return (
     <div className='container my-5'>
         <p className='display-6'>Our Latest Projects</p>
-        <h4 className='mb-0'>A fresh approach to financial services for entrepreneurs</h4>
-        <div className='d-flex flex-row' >
+        <h4 className='mb-2 '>A fresh approach to financial services for entrepreneurs</h4>
+        <div className='row justify-content-center'>
+
+        <div className="col-sm-3 col-md-6 col-lg-4">
             <img className="img-fluid" style={projectImg} src={Project1} alt=""/>
+            {/* <img className="img-fluid"  src={Project1} alt=""/> */}
+        </div>
+        <div className="col-sm-3 col-md-6 col-lg-4">
             <img className="img-fluid" style={projectImg} src={Project2} alt=""/>
+            {/* <img className="img-fluid"  src={Project2} alt=""/> */}
+        </div>
+        <div className="col-sm-3 col-md-6 col-lg-4">
             <img className="img-fluid" style={projectImg} src={Project3} alt=""/>
+            {/* <img className="img-fluid"  src={Project3} alt=""/> */}
+        </div>
         </div>
     </div>
   )

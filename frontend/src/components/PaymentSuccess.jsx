@@ -9,7 +9,7 @@ export default function PaymentSuccess() {
 
     return (
     <div className='container-fluid  text-center'>
-        <img className='img-fluid' src={SuccessImg} alt="" srcset="" />
+        <img className='img-fluid' src={SuccessImg} alt="" srcSet="" />
         <p>Reference no: {referenceNum} </p>
     </div>
   )

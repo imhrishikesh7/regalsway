@@ -1,13 +1,13 @@
 import React from "react";
-import "../styles/Pricing.scss";
+import "../styles/Pricing.css";
 
 export default function Card({ title, theme, amount, items, checkoutHandler }) {
   return (
     <div>
-      <div className="container ">
+      <div className="container">
         <div className="row my-5 ">
-          <div className="col-md-3 col-sm-6">
-            <div className={`pricingTable ${theme}`}>
+          <div className="col-md-3 col-sm-6 col-lg-4">
+            <div className={`border border-secondary rounded pricingTable ${theme}`}>
               <div className="pricingTable-header">
                 <h3 className="title">{title}</h3>
                 <div className="price-value">
@@ -15,9 +15,11 @@ export default function Card({ title, theme, amount, items, checkoutHandler }) {
                 </div>
               </div>
               <ul className="pricing-content">
-                {items.map((list)=>
-                    <li>{list}</li>
+                
+                {items.map((list, index)=> 
+                  <li key={index}>{list}</li>
                 )}
+
               </ul>
 
               <div className="pricingTable-signup">

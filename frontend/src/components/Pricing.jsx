@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import { Modal, Button } from "react-bootstrap";
-import "../styles/Pricing.scss";
+import "../styles/Pricing.css";
 import axios from "axios";
 
 export default function Pricing() {
@@ -23,144 +23,161 @@ export default function Pricing() {
   };
 
   const checkoutHandler = async (amount) => {
-    setShowForm(true); 
-    setSelectedAmount(amount);  
+    setShowForm(true);
+    setSelectedAmount(amount);
   }
 
-    const closeModal = () => {
-      setShowForm(false);
-    };
+  const closeModal = () => {
+    setShowForm(false);
+  };
 
-    const handleFormSubmit = async () => {
-      try{ 
-        const { data:{key} } = await axios.get("http://localhost:4000/api/getKey")
-        
-        const { data:{order} } = await axios.post("http://localhost:4000/api/checkout", {
-          amount: selectedAmount,
-        })
-        
-        const options = {
-          key, 
-          amount: order.amount, 
-          currency: "INR",
-          name: "RegalSway",
-          description: "Test Transaction",
-          image: "../images/second.png",
-          order_id: order.id, 
-          callback_url: "http://localhost:4000/api/paymentverification",
-          prefill: {
-            name: userData.name,
-            email: userData.email,
-            contact: userData.contact,
-          },
-          notes: {
-            address: "Razorpay Corporate Office",
-          },
-          theme: {
-            color: "#3b3b3b",
-          },
-        };
-        const razor = new window.Razorpay(options);
-          razor.open();
-         }catch (error) {
-          console.error("Error during checkout:", error);
-          // You can handle errors here, such as displaying an error message to the user.
-        }
-        closeModal()
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+    // Validate the form data
+    if (!userData.name || !userData.email || !userData.contact) {
+      alert("Please fill in all fields.");
+      return; // Do not submit the form if any field is empty
     }
+    try {
+      const { data: { key } } = await axios.get("http://localhost:4000/api/getKey")
+
+      const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        amount: selectedAmount,
+      })
+
+      const options = {
+        key,
+        amount: order.amount,
+        currency: "INR",
+        name: "RegalSway",
+        description: "Test Transaction",
+        image: "../images/second.png",
+        order_id: order.id,
+        callback_url: "http://localhost:4000/api/paymentverification",
+        prefill: {
+          name: userData.name,
+          email: userData.email,
+          contact: userData.contact,
+        },
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#3b3b3b",
+        },
+      };
+      const razor = new window.Razorpay(options);
+      razor.open();
+    } catch (error) {
+      console.error("Error during checkout:", error);
+      // You can handle errors here, such as displaying an error message to the user.
+    }
+    closeModal()
+  }
 
 
   return (
-    <div className="container">
-    <h1 className="display-6 container mt-5">Our Plans</h1>
-    <div className="box hstack">
-      <Card
-        title="BASIC"
-        amount={10000}
-        theme="green"
-        checkoutHandler={() => checkoutHandler(10000)}
-        items={["Monthly Plan", "Valid For A Month"]}
-      />
-      <Card
-        title="SILVER"
-        amount={25000}
-        theme="blue"
-        checkoutHandler={() => checkoutHandler(25000)}
-        items={["Quarterly Plan", "Valid For 3 Months"]}
-      />
-      <Card
-        title="GOLDEN"
-        amount={45000}
-        theme="gold"
-        checkoutHandler={() => checkoutHandler(45000)}
-        items={["Half Yearly Plan", "Valid For 6 Months"]}
-      />
-      <Card
-        title="PLATINUM"
-        amount={80000}
-        checkoutHandler={() => checkoutHandler(80000)}
-        items={["Yearly Plan", "Valid For An Year"]}
-      />
-      
-    </div>
+    <div className="container fluid">
+      <h1 className="display-6 container mt-5">Our Plans</h1>
+      <div className="row justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-4">
+          <Card
+            title="BASIC"
+            amount={10000}
+            theme="green"
+            checkoutHandler={() => checkoutHandler(10000)}
+            items={["Monthly Plan", "Valid For A Month"]}
+          />
+        </div>
+        <div className="col-sm-6 col-md-4 col-lg-4">
+          <Card
+            title="SILVER"
+            amount={25000}
+            theme="blue"
+            checkoutHandler={() => checkoutHandler(25000)}
+            items={["Quarterly Plan", "Valid For 3 Months"]}
+          />
+        </div>
+        <div className="col-sm-6 col-md-4 col-lg-4">
+          <Card
+            title="GOLDEN"
+            amount={45000}
+            theme="gold"
+            checkoutHandler={() => checkoutHandler(45000)}
+            items={["Half Yearly Plan", "Valid For 6 Months"]}
+          />
+        </div>
+        <div className="col-sm-6 col-md-4 col-lg-4">
+          <Card
+            title="PLATINUM"
+            amount={80000}
+            checkoutHandler={() => checkoutHandler(80000)}
+            items={["Yearly Plan", "Valid For An Year"]}
+          />
 
-    <Modal show={showForm} onHide={closeModal}>
-      <Modal.Header closeButton>
-        <Modal.Title>Enter Your Details</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <form>
-          {/* Form fields here */}
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">
-              Name:
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={userData.name}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              Email:
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={userData.email}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="contact" className="form-label">
-              Contact:
-            </label>
-            <input
-              type="tel"
-              id="contact"
-              name="contact"
-              value={userData.contact}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-        </form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={closeModal}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleFormSubmit}>
-          Submit
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  </div>
-);
+        </div>
+      </div>
+
+      <Modal show={showForm} onHide={closeModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Enter Your Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <form>
+            {/* Form fields here */}
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">
+                Name:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={userData.name}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={userData.email}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="contact" className="form-label">
+                Contact:
+              </label>
+              <input
+                type="tel"
+                id="contact"
+                name="contact"
+                value={userData.contact}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={closeModal}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleFormSubmit}>
+            Submit
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
 }
