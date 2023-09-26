@@ -16,6 +16,10 @@ if (!process.env.RAZORPAY_API_KEY) {
     process.exit(1); // Exit the application with an error code.
   }
 
+app.get("/", (req, res) => {
+  res.send("Welcome to www.regalsway.com server!");
+});
+  
 app.use("/api", paymentRoute)
 app.get("/api/getKey", (req, res) =>{
     res.status(200).json({ key: process.env.RAZORPAY_API_KEY})
