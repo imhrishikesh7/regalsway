@@ -19,11 +19,12 @@ if (!process.env.RAZORPAY_API_KEY) {
 app.get("/", (req, res) => {
   res.send("Welcome to www.regalsway.com server!");
 });
+app.use("/api", apiRouter); // Use the custom API router
   
-app.use("/api", paymentRoute)
-app.get("/api/getKey", (req, res) =>{
-    res.status(200).json({ key: process.env.RAZORPAY_API_KEY})
-})
+// app.use("/api", paymentRoute)
+// app.get("/api/getKey", (req, res) =>{
+//     res.status(200).json({ key: process.env.RAZORPAY_API_KEY})
+// })
 
 // Error handling middleware
 app.use((err, req, res, next) => {
