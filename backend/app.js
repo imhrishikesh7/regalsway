@@ -20,8 +20,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to www.regalsway.com server!");
 });
   
-app.use("https://regalsway.onrender.com/api", paymentRoute)
-app.get("https://regalsway.onrender.com/api/getKey", (req, res) =>{
+app.use("/api", paymentRoute)
+app.get("/api/getKey", (req, res) =>{
     res.status(200).json({ key: process.env.RAZORPAY_API_KEY})
 })
 
