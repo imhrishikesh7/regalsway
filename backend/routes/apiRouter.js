@@ -3,6 +3,6 @@ import paymentRoute from "./paymentRoutes.js";
 
 const apiRouter = express.Router();
 
-apiRouter.use("https://regalsway.onrender.com", paymentRoute);
+apiRouter.use("/payment", paymentRoute);
 
 export default apiRouter;
