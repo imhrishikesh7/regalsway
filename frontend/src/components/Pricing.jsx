@@ -53,7 +53,7 @@ export default function Pricing() {
         description: "Test Transaction",
         image: "../images/second.png",
         order_id: order.id,
-        callback_url: "http://localhost:4000/api/paymentverification",
+        callback_url: "https://regalsway.onrender.com/api/payment/paymentverification", //Modify the url wrto the actual server domain.
         prefill: {
           name: userData.name,
           email: userData.email,
