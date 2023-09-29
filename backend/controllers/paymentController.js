@@ -35,8 +35,8 @@ export const paymentVerification = async (req, res) => {
     .update(body.toString())
     .digest("hex");
   
-    const redirectURL = `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`;
-    
+    const redirectURL = `https://regalswayfront.onrender.com/paymentsuccess?reference=${razorpay_payment_id}`;
+    //Modify this url wrto the actal frontend domain name.
 
   const isAuthentic = expectedSignature === razorpay_signature;
   if(isAuthentic){
