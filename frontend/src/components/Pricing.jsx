@@ -39,9 +39,9 @@ export default function Pricing() {
       return; // Do not submit the form if any field is empty
     }
     try {
-      const { data: { key } } = await axios.get("http://localhost:4000/api/getKey")
+      const { data: { key } } = await axios.get("https://regalsway.onrender.com/api/payment/getkey")
 
-      const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+      const { data: { order } } = await axios.post("https://regalsway.onrender.com/api/payment/checkout", {
         amount: selectedAmount,
       })
 
