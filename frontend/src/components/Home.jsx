@@ -8,23 +8,11 @@ import '../App.css';
 import Projects from "./Projects";
 
 export default function Home() {
-  let btnStyle = {
-    rotate: "-90deg",
-    // position: "absolute",
-    marginLeft: "0",
-    position: "fixed",
-    // position: "absolute",
-    top: "300px",
-    left: "-45px",
-    zIndex: "99",
-    whiteSpace: "nowrap",
-  };
   return (
     <>
       <button
         type="button"
-        className="btn btn-success my-0 fixed-left "
-        style={btnStyle}
+        className="btn btn-success my-0 fixed-left rotated-btn"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
