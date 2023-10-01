@@ -116,6 +116,28 @@
   text-align: center;
 }
 
+/* CSS for the rotated button */
+.rotated-btn {
+  transform: rotate(-90deg);
+  position: fixed;
+  left: 0px; /* Adjust the left position as needed for your layout */
+  top: 50%; /* Adjust the top position as needed for your layout */
+  transform-origin: 0% 0%;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .rotated-btn {
+    position: absolute;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
+
 @media only screen and (max-width: 934px) {
   .carousel-root {
     outline: 0;
