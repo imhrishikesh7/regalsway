@@ -39,9 +39,9 @@ export default function Pricing() {
       return; // Do not submit the form if any field is empty
     }
     try {
-      const { data: { key } } = await axios.get("https://regalsway.onrender.com/api/payment/getkey")
+      const { data: { key } } = await axios.get("http://localhost:4000/api/getKey") //Modify the url wrto the actual server domain.
 
-      const { data: { order } } = await axios.post("https://regalsway.onrender.com/api/payment/checkout", {
+      const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", { //Modify the url wrto the actual server domain.
         amount: selectedAmount,
       })
 
@@ -53,7 +53,8 @@ export default function Pricing() {
         description: "Test Transaction",
         image: "../images/second.png",
         order_id: order.id,
-        callback_url: "https://regalsway.onrender.com/api/payment/paymentverification", //Modify the url wrto the actual server domain.
+        callback_url: "http://localhost:4000/api/paymentverification",
+        //Modify the url wrto the actual server domain.
         prefill: {
           name: userData.name,
           email: userData.email,
@@ -120,11 +121,13 @@ export default function Pricing() {
 
       <Modal show={showForm} onHide={closeModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Enter Your Details</Modal.Title>
+          {/* <Modal.Title>Enter Your Details</Modal.Title> */} 
+          {/* Replace the below title later */}
+          <Modal.Title>Regalsway</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form>
-            {/* Form fields here */}
+          {/* <form>
+          
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name:
@@ -167,7 +170,10 @@ export default function Pricing() {
                 required
               />
             </div>
-          </form>
+          </form> */}
+          {/* later delete the heading and p below and uncomment the above form */}
+        <h2>Page under construction</h2>
+        <p>Contact regalsway pvt. ldt. for more queries through our contact section, sorry for inconvinience, payments section is under construction. Stay tuned for updates.</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={closeModal}>
