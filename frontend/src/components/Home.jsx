@@ -1,5 +1,5 @@
 import React from "react";
-import QRCode from "../images/demo-qr.jpg";
+import QRCode from "../images/qrcode.png";
 import user from "../images/user.png"
 import Services from "./Services";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader

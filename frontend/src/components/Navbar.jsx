@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 // import '../App.css';
-
 import LogoBrand from "../images/logoBrand.png";
 import React, { useState } from "react";
 import HeadBg from "./HeadBg";
@@ -96,7 +95,7 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> 
       <HeadBg/>
     </div>
   );
