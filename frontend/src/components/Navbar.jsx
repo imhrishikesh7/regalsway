@@ -16,6 +16,14 @@ export default function Navbar() {
       }
   };
   window.addEventListener('scroll', changeNavbarColor);
+  
+  const closeMobileMenu = () => {
+    const navbarToggler = document.getElementById("navbarToggler");
+    if (navbarToggler) {
+      navbarToggler.classList.remove("show");
+    }
+  };
+  
   return (
     <div>
       <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"}  data-bs-theme="dark">
@@ -31,6 +39,7 @@ export default function Navbar() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            id="navbarToggler"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -41,6 +50,7 @@ export default function Navbar() {
                   className="nav-link"
                   aria-current="page"
                   to="/"
+                  onClick={closeMobileMenu}
                 >
                   Home
                 </Link>
@@ -51,6 +61,7 @@ export default function Navbar() {
                  className="nav-link"
                  aria-current="page"
                  to="/about"
+                 onClick={closeMobileMenu}
                  >
                   About
                 </Link>
@@ -60,6 +71,7 @@ export default function Navbar() {
                  className="nav-link"
                  aria-current="page"
                  to="/services"
+                 onClick={closeMobileMenu}
                  >
                   Services
                 </Link>
@@ -69,6 +81,7 @@ export default function Navbar() {
                  className="nav-link"
                  aria-current="page"
                  to="/pricing"
+                 onClick={closeMobileMenu}
                  >
                   Pricing
                 </Link>
@@ -78,6 +91,7 @@ export default function Navbar() {
                  className="nav-link"
                  aria-current="page"
                  to="/sebicircular"
+                 onClick={closeMobileMenu}
                  >
                   Sebi Cricular
                 </Link>
@@ -88,6 +102,7 @@ export default function Navbar() {
                  className="nav-link"
                  aria-current="page"
                  to="/contactus"
+                 onClick={closeMobileMenu}
                  >
                   Contact Us
                 </Link>
