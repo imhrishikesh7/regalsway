@@ -1,8 +1,8 @@
 {
-  "name": "regalsway",
+  "name": "research elite",
   "version": "0.1.0",
   "private": true,
-  "description": "regalsway is an algo trading website for an advisory firm",
+  "description": "Research Elite is an algo trading website for an advisory firm",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
