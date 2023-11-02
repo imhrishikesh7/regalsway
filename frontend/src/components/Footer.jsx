@@ -75,21 +75,7 @@ export default function Footer() {
                       <i className="fas fa-paw pe-3"></i>Strategy Deployment
                     </a>
                   </li>
-                  <li className="mb-2">
-                    <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Software Services
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Wrodpress Website Services
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Volunteer activities
-                    </a>
-                  </li>
+                
                 </ul>
               </div>
               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
