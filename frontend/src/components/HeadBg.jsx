@@ -33,7 +33,7 @@ export default function HeadBg() {
   return (
     <div style={containerStyle}>
       <img className='img-fluid' style={bgStyle} alt='' src={BgImage} />
-      <h3 style={h3Style}>regalsway {location.pathname}</h3>
+      <h3 style={h3Style}>Research Elite {location.pathname}</h3>
     </div>
   );
 }
