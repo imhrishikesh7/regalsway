@@ -1,4 +1,4 @@
-import Logo from "../images/logo1.png"
+import Logo from "../images/logoBrand.png"
 import React from "react";
 
 export default function Footer() {
