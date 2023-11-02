@@ -26,8 +26,8 @@ export default function Footer() {
                 >
                   <img
                     src={Logo}
-                    height="350"
-                    alt=""
+                    height=""
+                    alt="150"
                     loading="lazy"
                   />
                 </div>
