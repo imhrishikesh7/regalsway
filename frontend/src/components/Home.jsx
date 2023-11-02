@@ -68,7 +68,7 @@ export default function Home() {
               <h3>Shreyas Mehta</h3>
               <h4>Satisfied User</h4>
               <p>
-                Regalsway let us develop, test and implement systematic strategies for trading so that we can quickly identify market dislocations.We are satisfied with the solution and service.
+                Research Elite let us develop, test and implement systematic strategies for trading so that we can quickly identify market dislocations.We are satisfied with the solution and service.
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
               <h3>Vinay Sharma</h3>
               <h4>Satisfied User</h4>
               <p>
-                We thank Regalsway for the wonderful job in helping us develop our trading strategy. Everyone was professional, excellent and hard working. We look forward to continue working.
+                We thank Research Elite for the wonderful job in helping us develop our trading strategy. Everyone was professional, excellent and hard working. We look forward to continue working.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
               <h3>Neha vashishth</h3>
               <h4>Satisfied User</h4>
               <p>
-                I am really thankful to Regalsway. With the help of their software, I am able to earn profit in the stock market.
+                I am really thankful to Research Elite. With the help of their software, I am able to earn profit in the stock market.
               </p>
             </div>
           </div>

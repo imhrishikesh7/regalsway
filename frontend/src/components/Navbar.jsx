@@ -16,17 +16,18 @@ export default function Navbar() {
       }
   };
   window.addEventListener('scroll', changeNavbarColor);
-  
+
   const closeMobileMenu = () => {
-    const navbarToggler = document.getElementById("navbarToggler");
-    if (navbarToggler) {
-      navbarToggler.classList.remove("show");
+    const navbarNav = document.getElementById('navbarSupportedContent');
+    if (navbarNav && navbarNav.classList.contains('show')) {
+      navbarNav.classList.remove('show');
     }
-  };
+  }
   
+
   return (
     <div>
-      <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"}  data-bs-theme="dark">
+      <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"} data-bs-theme="dark">
         <div className="container-fluid">
         <a className="navbar-brand" href="/">
             <img src={LogoBrand} height={"50px"} alt="" />
@@ -34,7 +35,7 @@ export default function Navbar() {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
+            data-bs-toggle="collapse" 
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
@@ -52,13 +53,13 @@ export default function Navbar() {
                   to="/"
                   onClick={closeMobileMenu}
                 >
-                  Home
+                  Home 
                 </Link>
                 
               </li>
               <li className="nav-item">
                  <Link
-                 className="nav-link"
+                 className="nav-link" 
                  aria-current="page"
                  to="/about"
                  onClick={closeMobileMenu}

@@ -134,7 +134,7 @@ export default function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <p>
-                      <i className="fas fa-map-marker-alt pe-2"></i>Regalsway office, 
+                      <i className="fas fa-map-marker-alt pe-2"></i>Research Elite office, 
                       Vijay nagar, Indore
                     </p>
                   </li>
@@ -146,7 +146,7 @@ export default function Footer() {
                   <li>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@regalsway.in
+                      info@eesearchelite.co.in
                     </p>
                   </li>
                 </ul>
@@ -158,8 +158,8 @@ export default function Footer() {
             style={footerStyle2}
           >
             © {currentYear} Copyright: 
-            <a className="text-white" href=" https://regalsway.com/">
-              regalsway.com
+            <a className="text-white" href=" https://researchrlite.co.in/">
+              researchrlite.co.in
             </a>
           </div>
         </footer>

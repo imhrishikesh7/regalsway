@@ -6,7 +6,7 @@ export default function About() {
     <div className="container">
       <div className="container mt-5 main d-flex flex-column-reverse flex-md-row">
         <div>
-          <p className="display-6">About Regalsway Algo Software</p>
+          <p className="display-6">About Research Elite Algo Software</p>
           <h4>Expert advice to invest capital with Algo platform</h4>
           <p style={{ textAlign: "justify" }}>
             If a dealer trades after the crucial time gap, the stock price might
