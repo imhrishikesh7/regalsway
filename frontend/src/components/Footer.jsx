@@ -132,7 +132,7 @@ export default function Footer() {
                   <li>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@eesearchelite.co.in
+                      info@researchelite.co.in
                     </p>
                   </li>
                 </ul>
