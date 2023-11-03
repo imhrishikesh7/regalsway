@@ -2,7 +2,7 @@
   "name": "regalsway",
   "version": "0.1.0",
   "private": true,
-  "description": "Research Elite is an algo trading website for an advisory firm",
+  "description": "research elite is an algo trading website for an advisory firm",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,7 +20,9 @@
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
+    "react-tsparticles": "^2.12.2",
     "styled-components": "^6.0.7",
+    "tsparticles": "^2.12.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
