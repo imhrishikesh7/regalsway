@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // import '../App.css';
-import LogoBrand from "../images/logoBrand.png";
+import LogoBrand from "../images/logo1.png";
 import React, { useState } from "react";
 import HeadBg from "./HeadBg";
 
@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"} data-bs-theme="dark">
         <div className="container-fluid">
         <a className="navbar-brand" href="/">
-            <img src={LogoBrand} height={"50px"} alt="" />
+            <img src={LogoBrand} height={"80px"} alt="" />
           </a>
           <button
             className="navbar-toggler"
@@ -52,6 +52,7 @@ export default function Navbar() {
                   aria-current="page"
                   to="/"
                   onClick={closeMobileMenu}
+                  style={{color: "white"}}
                 >
                   Home 
                 </Link>
@@ -63,6 +64,7 @@ export default function Navbar() {
                  aria-current="page"
                  to="/about"
                  onClick={closeMobileMenu}
+                 style={{color: "white"}}
                  >
                   About
                 </Link>
@@ -73,6 +75,7 @@ export default function Navbar() {
                  aria-current="page"
                  to="/services"
                  onClick={closeMobileMenu}
+                 style={{color: "white"}}
                  >
                   Services
                 </Link>
@@ -83,6 +86,7 @@ export default function Navbar() {
                  aria-current="page"
                  to="/pricing"
                  onClick={closeMobileMenu}
+                 style={{color: "white"}}
                  >
                   Pricing
                 </Link>
@@ -93,6 +97,7 @@ export default function Navbar() {
                  aria-current="page"
                  to="/sebicircular"
                  onClick={closeMobileMenu}
+                 style={{color: "white"}}
                  >
                   Sebi Cricular
                 </Link>
@@ -104,6 +109,7 @@ export default function Navbar() {
                  aria-current="page"
                  to="/contactus"
                  onClick={closeMobileMenu}
+                 style={{color: "white"}}
                  >
                   Contact Us
                 </Link>
