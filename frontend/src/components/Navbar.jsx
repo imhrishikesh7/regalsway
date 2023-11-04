@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-// import '../App.css';
-import LogoBrand from "../images/logo1.png";
+import '../App.css';
+import LogoBrand from "../images/logo2.png";
 import React, { useState } from "react";
 import HeadBg from "./HeadBg";
 
@@ -28,9 +28,9 @@ export default function Navbar() {
   return (
     <div>
       <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"} data-bs-theme="dark">
-        <div className="container-fluid">
+        <div className="container-fluid justify-content-center">
         <a className="navbar-brand" href="/">
-            <img src={LogoBrand} height={"80px"} alt="" />
+            <img src={LogoBrand} height={"100px"} alt="" />
           </a>
           <button
             className="navbar-toggler"
@@ -44,8 +44,8 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 opacity-100">
+          <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <ul className="navbar-nav text-center ul mb-2 mb-lg-0 fs-4 opacity-100">
               <li className="nav-item">
                 <Link
                   className="nav-link"
@@ -69,16 +69,36 @@ export default function Navbar() {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-              <Link
-                 className="nav-link"
+              <li className="nav-item dropdown">
+              <button className="btn dropdown-toggle fs-4" data-bs-toggle="dropdown" style={{color: "white"}} aria-expanded="false">
+                Services
+              </button>
+              <ul className="dropdown-menu dropdown-menu-dark">
+                <li>
+                <Link
+                 className="nav-link dropdown-item"
                  aria-current="page"
                  to="/services"
                  onClick={closeMobileMenu}
                  style={{color: "white"}}
                  >
-                  Services
+                  IT Services
                 </Link>
+                </li>
+                <li>
+                <Link
+                 className="nav-link dropdown-item"
+                 aria-current="page"
+                 to="/services"
+                 onClick={closeMobileMenu}
+                 style={{color: "white"}}
+                 >
+                  Algo Services
+                </Link>
+                </li>
+              </ul>
+
+              
               </li>
               <li className="nav-item">
               <Link

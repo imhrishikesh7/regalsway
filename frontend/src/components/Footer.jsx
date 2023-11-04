@@ -1,4 +1,4 @@
-import Logo from "../images/logoBrand.png"
+import Logo from "../images/logo1.png"
 import React from "react";
 
 export default function Footer() {
@@ -75,7 +75,21 @@ export default function Footer() {
                       <i className="fas fa-paw pe-3"></i>Strategy Deployment
                     </a>
                   </li>
-                
+                  <li className="mb-2">
+                    <a href="/" className="text-white">
+                      <i className="fas fa-paw pe-3"></i>Software Services
+                    </a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="/" className="text-white">
+                      <i className="fas fa-paw pe-3"></i>Wrodpress Website Services
+                    </a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="/" className="text-white">
+                      <i className="fas fa-paw pe-3"></i>Volunteer activities
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -132,7 +146,7 @@ export default function Footer() {
                   <li>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@researchelite.co.in
+                      info@eesearchelite.co.in
                     </p>
                   </li>
                 </ul>
@@ -144,8 +158,8 @@ export default function Footer() {
             style={footerStyle2}
           >
             © {currentYear} Copyright: 
-            <a className="text-white" href=" https://researchelite.co.in/">
-              researchelite.co.in
+            <a className="text-white" href=" https://researchrlite.co.in/">
+              researchrlite.co.in
             </a>
           </div>
         </footer>
