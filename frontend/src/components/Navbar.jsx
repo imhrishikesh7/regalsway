@@ -29,7 +29,7 @@ export default function Navbar() {
     <div>
       <nav className={colorChange ? "navbar colorChange fixed-top navbar-expand-lg" : "navbar fixed-top navbar-expand-lg"} data-bs-theme="dark">
         <div className="container-fluid justify-content-center">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand px-4" href="/">
             <img src={LogoBrand} height={"100px"} alt="" />
           </a>
           <button
@@ -45,7 +45,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul className="navbar-nav text-center ul mb-2 mb-lg-0 fs-4 opacity-100">
+            <ul className="navbar-nav text-center ul mb-2 mb-lg-0 fs-5 opacity-100">
               <li className="nav-item">
                 <Link
                   className="nav-link"
@@ -70,7 +70,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item dropdown">
-              <button className="btn dropdown-toggle fs-4" data-bs-toggle="dropdown" style={{color: "white"}} aria-expanded="false">
+              <button className="btn dropdown-toggle fs-5" data-bs-toggle="dropdown" style={{color: "white"}} aria-expanded="false">
                 Services
               </button>
               <ul className="dropdown-menu dropdown-menu-dark">
