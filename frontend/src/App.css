@@ -6,7 +6,28 @@
 .navbar.colorChange {
 	background-color: #000;
 }
-
+/* .ul {
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+} */
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  content: "";
+  background-color: #fff;
+  width: 0%;
+  height: 2px;
+  transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
 .carousel-root {
   width: 64% !important;
   margin: auto !important;
