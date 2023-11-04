@@ -153,8 +153,8 @@ export default function HeadBg() {
           marginTop: '0',
           background: `url(${BgImage}) center center / cover no-repeat`,
         }}
-{/*       >
-        <h3
+       >
+{/*         <h3
           style={{
             position: 'absolute',
             bottom: '20px', // Adjust this value to set the margin below the text
@@ -164,7 +164,7 @@ export default function HeadBg() {
           }}
         >
           Research Elite {location.pathname}
-        </h3> */}
+        </h3>  */}
       </div>
     </div>
   );
