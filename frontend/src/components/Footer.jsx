@@ -134,8 +134,8 @@ export default function Footer() {
             style={footerStyle2}
           >
             © {currentYear} Copyright: 
-            <a className="text-white" href=" https://researchrlite.co.in/">
-              researchrlite.co.in
+            <a className="text-white" href=" https://researchelite.co.in/">
+              researchelite.co.in
             </a>
           </div>
         </footer>
