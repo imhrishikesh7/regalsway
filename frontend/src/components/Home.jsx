@@ -1,7 +1,6 @@
 import React from "react";
 import QRCode from "../images/qrcode.png";
 import user from "../images/user.png"
-import Services from "./Services";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../App.css';
@@ -49,7 +48,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Services showAlgoServices={false} />
+      
       <Projects />
       <div className="container mt-5">
         <h1 className=" text-center container mt-5">Testimonials</h1>
