@@ -109,7 +109,7 @@ export default function Footer() {
 
                 <ul className="list-unstyled">
                   <li className="d-flex">
-                  <img width="15" height="15" src="https://img.icons8.com/sf-ultralight-filled/25/FFFFFF/visit.png" alt="visit"/>
+                  <img width="20" height="20" src="https://img.icons8.com/sf-ultralight-filled/25/FFFFFF/visit.png" alt="visit"/>
                     <p>
                       <i className="fas fa-map-marker-alt pe-2"></i>Research Elite office, 
                       Vijay nagar, Indore
