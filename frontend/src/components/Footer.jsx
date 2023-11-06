@@ -96,7 +96,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div class="col-lg-3 col-md-4 my-4">
-                            <h4></h4>
+                            
                             <ul class="footer-links">
                              <li className="my-2"> <a href="/">Portfolio</a> </li>
                              <li className="my-2"> <a href="/"> Privacy Policy</a></li>
