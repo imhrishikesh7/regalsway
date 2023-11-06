@@ -51,7 +51,7 @@ export default function Home() {
       </div>
       <Services showAlgoServices={false} />
       <Projects />
-      <div className="container">
+      <div className="container mt-5">
         <h1 className=" text-center container mt-5">Testimonials</h1>
 
         <Carousel
