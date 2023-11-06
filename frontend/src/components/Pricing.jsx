@@ -79,7 +79,7 @@ export default function Pricing() {
 
   return (
     <div className="container fluid">
-      <h1 className="display-6 container mt-5">Our Plans</h1>
+      <h1 className="text-center container mt-5">Our Plans</h1>
       <div className="row justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-4">
           <Card

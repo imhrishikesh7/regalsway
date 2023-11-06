@@ -49,10 +49,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Services />
+      <Services showAlgoServices={false} />
       <Projects />
       <div className="container">
-        <h1 className="display-6 container mt-5">Testimonials</h1>
+        <h1 className=" text-center container mt-5">Testimonials</h1>
 
         <Carousel
           showArrows={true}

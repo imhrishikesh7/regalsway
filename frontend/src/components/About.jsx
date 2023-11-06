@@ -6,8 +6,8 @@ export default function About() {
     <div className="container">
       <div className="container mt-5 main d-flex flex-column-reverse flex-md-row">
         <div>
-          <p className="display-6">About Research Elite Algo Software</p>
-          <h4>Expert advice to invest capital with Algo platform</h4>
+          <h1 className="text-center">About Research Elite Algo Software</h1>
+          <h4 className="text-center mt-5">Expert advice to invest capital with Algo platform</h4>
           <p style={{ textAlign: "justify" }}>
             If a dealer trades after the crucial time gap, the stock price might
             be rising, and they could miss a trading opportunity. Therefore, you

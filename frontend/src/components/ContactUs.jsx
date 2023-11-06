@@ -9,7 +9,7 @@ export default function ContactUs() {
     }
   return (
     <>
-    <h1 className="display-6 container mt-5">Get In Touch With US</h1>
+    <h1 className="text-center container mt-5">Get In Touch With US</h1>
     <div className=" container container-fluid text-light py-3 mb-5" style={contactUsBgStyle}>
       <div  className="container my-5" >
         <div  className="row justify-content-center">

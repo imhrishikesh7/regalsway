@@ -16,6 +16,30 @@ export default function HeadBg() {
   return (
     <div style={{ position: 'relative', height: '90vh' }}>
       
+      
+
+      {/* Header Banner */}
+      <div
+        style={{
+          height: '90vh',
+          width: '100%',
+          objectFit: 'cover',
+          filter: 'brightness(0.4)',
+          marginTop: '0',
+          background: `url(${BgImage})  center / cover no-repeat`,
+          position: 'relative',
+        }}
+      >
+        {/* <h3
+            position: 'absolute',
+            bottom: '20px', // Adjust this value to set the margin below the text
+            left: '50%',
+            transform: 'translateX(-50%)',
+            color: 'white', // Change the color to gray
+          }}
+        >
+          Research Elite {location.pathname}
+        </h3> */}
       {/* Particles */}
       <Particles
         id="tsparticles"
@@ -43,7 +67,7 @@ export default function HeadBg() {
                   }
               },
               "opacity": {
-                  "value": 0.2,
+                  "value": 0.4,
                   "random": false,
                   "anim": {
                       "enable": false,
@@ -76,7 +100,7 @@ export default function HeadBg() {
                   "enable": true,
                   "distance": 150,
                   "color": "#ffffff",
-                  "opacity": 0.4,
+                  "opacity": 0.5,
                   "width": 2
               },
               "move": {
@@ -117,7 +141,7 @@ export default function HeadBg() {
                       "distance": 200,
                       "size": 10,
                       "duration": 2,
-                      "opacity": 8,
+                      "opacity": 10,
                       "speed": 3
                   },
                   "repulse": {
@@ -137,35 +161,20 @@ export default function HeadBg() {
               "image": {
                 "src": {BgImage}
               },
-              "position": "",
+              "position": "50% 50%",
               "repeat": "no-repeat",
               // "size": "cover"
           }  
         }}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}
-      />
-
-      {/* Header Banner */}
-      <div
-        style={{
-          height: '90vh',
-          width: '100%',
-          objectFit: 'cover',
-          filter: 'brightness(0.4)',
-          marginTop: '0',
-          background: `url(${BgImage})  center / cover no-repeat`,
+        style={{ position: 'fixed',
+         top: 0, 
+         left: 0, 
+         width: '100%', 
+         height: '100%', 
+         zIndex: -1 
         }}
-      >
-        {/* <h3
-            position: 'absolute',
-            bottom: '20px', // Adjust this value to set the margin below the text
-            left: '50%',
-            transform: 'translateX(-50%)',
-            color: 'white', // Change the color to gray
-          }}
-        >
-          Research Elite {location.pathname}
-        </h3> */}
+      />
+      
       </div>
       
     </div>

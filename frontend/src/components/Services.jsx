@@ -3,7 +3,7 @@ import Second from "../images/second.png";
 import Third from "../images/third.png";
 import Forth from "../images/forth.png";
 import React from "react";
-export default function Services() {
+export default function Services({ showAlgoServices }) {
   let algoServicesStyle = {
     height: "50vh",
     width: "40vw",
@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <>
       <div className="container container-fluid my-5">
-        <p className="display-6">Services</p>
+        <h1 className="text-center">Services</h1>
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col">
@@ -58,8 +58,9 @@ export default function Services() {
           </div>
         </div>
       </div>
+      {showAlgoServices && (
       <div className="container">
-        <p className="display-6 my-4">Algo Services</p>
+        <h1 className="text-center my-4">Algo Services</h1>
         <div className="d-flex container">
           <div>
             <img
@@ -99,6 +100,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </>
+      )}
+  </>
   );
 }
