@@ -10,7 +10,7 @@ export default function Projects() {
     }
 
   return (
-    <div className='container my-5'>
+    <div className='container my-5 mb-5'>
         <h1 className='text-center'>Our Latest Projects</h1>
         <h4 className='mb-2 '>A fresh approach to financial services for entrepreneurs</h4>
         <div className='row justify-content-center'>
