@@ -1,8 +1,50 @@
 
 .navbar {
-	background-color: transparent;
+  background-color: transparent;
+  padding: 0;
 }
 
+.navbar .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  margin-right: 5em; /* Remove any unwanted margin */
+}
+
+.navbar2 {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+  padding: 4px;
+  width: 75%; /* Set the width to 100% to fill the entire navbar */
+  display: flex;
+  justify-content: space-between; /* Put logo and items at opposite ends */
+  align-items: center;
+  max-width: 1200px; /* Add a maximum width if needed */
+}
+
+/* Remove width and height styles for .navbar2 */
+.navbar2 img {
+  height: 100px; /* Set the desired height for the logo */
+}
+
+/* Adjust the margin for the nav items to create space */
+.navbar .navbar-collapse ul {
+  margin: 0;
+}
+
+  
+
+/* .navbar .Brnav {
+  color:white;
+  z-index: 1;
+  width: 50vw;
+  size: 4px;
+  display: block;
+} */
 .navbar.colorChange {
 	background-color: #000;
 }
@@ -10,12 +52,13 @@
   padding: 10px;
   border-bottom: 1px solid #fff;
 } */
-.navbar .navbar-nav .nav-item {
+.navbar .navbar-nav .hov {
   position: relative;
 }
-.navbar .navbar-nav .nav-item::after {
+.navbar .navbar-nav .hov::after {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  bottom: 0.5px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -25,8 +68,9 @@
   height: 2px;
   transition: all 0.5s;
 }
-.navbar .navbar-nav .nav-item:hover::after {
-  width: 100%;
+.navbar .navbar-nav .hov:hover::after,
+.navbar .navbar-nav .hov.show::after {
+  width: 80%;
 }
 .carousel-root {
   width: 64% !important;
@@ -146,6 +190,26 @@
   transform-origin: 0% 0%;
   white-space: nowrap;
   z-index: 99;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Define a custom bullet style with a green arrow */
+.footer-links li::before {
+  content: "➤"; /* You can change the arrow to your preferred style */
+  color: green;
+  margin-right: 8px;
 }
 
 /* Media query for smaller screens */
