@@ -1,5 +1,6 @@
 import BgImage from '../images/plexus_bg.jpg';
 import React from 'react';
+import '../App.css';
 // import { useLocation } from 'react-router-dom';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -14,6 +15,7 @@ export default function HeadBg() {
 
   return (
     <div style={{ position: 'relative', height: '90vh' }}>
+      
       {/* Particles */}
       <Particles
         id="tsparticles"
@@ -147,15 +149,14 @@ export default function HeadBg() {
       <div
         style={{
           height: '90vh',
-          width: '100vw',
+          width: '100%',
           objectFit: 'cover',
           filter: 'brightness(0.4)',
           marginTop: '0',
-          background: `url(${BgImage}) center center / cover no-repeat`,
+          background: `url(${BgImage})  center / cover no-repeat`,
         }}
-       >
-{/*         <h3
-          style={{
+      >
+        {/* <h3
             position: 'absolute',
             bottom: '20px', // Adjust this value to set the margin below the text
             left: '50%',
@@ -164,8 +165,9 @@ export default function HeadBg() {
           }}
         >
           Research Elite {location.pathname}
-        </h3>  */}
+        </h3> */}
       </div>
+      
     </div>
   );
 }

@@ -1,11 +1,13 @@
 import Logo from "../images/logo1.png"
 import React from "react";
+import '../App.css';
 
 export default function Footer() {
     let footerStyle1={
         width: "150px",
         height: "150px"
-    }
+        
+     }
     let footerStyle2={
         backgroundColor: "black"
     }
@@ -21,10 +23,11 @@ export default function Footer() {
             <div className="row my-4">
               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <div
-                  className="rounded-circle bg-dark  d-flex align-items-center justify-content-center mb-4 mx-0"
+                  className="rounded-circle my-5 bg-dark d-flex align-items-center justify-content-center mb-4 mx-0"
                   style={footerStyle1}
                 >
                   <img
+                    className=""
                     src={Logo}
                     height="150"
                     alt=""
@@ -72,7 +75,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2">
                     <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Strategy Deployment
+                      <i className="fas fa-paw pe-3"></i>Strategy Development
                     </a>
                   </li>
                   <li className="mb-2">
@@ -92,41 +95,14 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 className="text-uppercase mb-4">Menu</h5>
-
-                <ul className="list-unstyled">
-                  <li className="mb-2">
-                    <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Home
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="/" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>About
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="#!" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Services
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="#!" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Pricing
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="#!" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Payment
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="#!" className="text-white">
-                      <i className="fas fa-paw pe-3"></i>Contact Us
-                    </a>
-                  </li>
-                </ul>
+              <div class="col-lg-3 col-md-4 my-4">
+                            <h4></h4>
+                            <ul class="footer-links">
+                             <li className="my-2"> <a href="/">Portfolio</a> </li>
+                             <li className="my-2"> <a href="/"> Privacy Policy</a></li>
+                             <li className="my-2"> <a href="/"> Terms & Conditions</a></li>
+                            <li className="my-2"> <a href="/"> Refund Policy</a></li>
+                         </ul>
               </div>
               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 className="text-uppercase mb-4">Contact</h5>
