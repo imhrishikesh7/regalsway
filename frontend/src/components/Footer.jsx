@@ -108,21 +108,24 @@ export default function Footer() {
                 <h5 className="text-uppercase mb-4">Contact</h5>
 
                 <ul className="list-unstyled">
-                  <li>
+                  <li className="d-flex">
+                  <img width="25" height="25" src="https://img.icons8.com/sf-ultralight-filled/25/FFFFFF/visit.png" alt="visit"/>
                     <p>
                       <i className="fas fa-map-marker-alt pe-2"></i>Research Elite office, 
                       Vijay nagar, Indore
                     </p>
                   </li>
-                  <li>
+                  <li className="d-flex">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="phone"/>
                     <p>
                       <i className="fas fa-phone pe-2"></i>+ 91 XXXXX XXXXX 
                     </p>
                   </li>
-                  <li>
+                  <li className="d-flex">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="new-post"/>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@eesearchelite.co.in
+                      info@researchelite.co.in
                     </p>
                   </li>
                 </ul>
