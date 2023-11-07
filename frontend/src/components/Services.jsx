@@ -14,7 +14,7 @@ export default function Services({ showAlgoServices }) {
   return (
     <>
       <div className="container container-fluid my-5">
-        <h1 className="text-center">Services</h1>
+        <h1 className="text-center">Algo Services</h1>
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col">
