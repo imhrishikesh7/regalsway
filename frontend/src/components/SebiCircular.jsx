@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function SebiCircular() {
   return (
+    <>
     <div className="container mt-5">
       <h1 className="text-center mt-5">SEBI Circular for Algorithm Companies</h1>
       <h2 className="mt-4 text-center">SEBI/HO/MIRSD/DOP/P/CIR/2022/117</h2>
@@ -54,5 +55,6 @@ export default function SebiCircular() {
         </li>
       </ol>
     </div>
+    </>
   );
 }
