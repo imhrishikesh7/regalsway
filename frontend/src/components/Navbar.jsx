@@ -17,6 +17,10 @@ export default function Navbar() {
   };
   window.addEventListener('scroll', changeNavbarColor);
 
+    const handleLoginClick = () => {
+      window.open("https://client.researchelite.in", "_blank"); // Opens the URL in a new tab
+    };
+
   const closeMobileMenu = () => {
     const navbarNav = document.getElementById('navbarSupportedContent');
     if (navbarNav && navbarNav.classList.contains('show')) {
@@ -135,15 +139,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item mx-2">
-              <Link
-                 className="nav-link"
-                 aria-current="page"
-                 to="/contactus"
-                 onClick={closeMobileMenu}
-                 style={{color: "white"}}
-                 >
-                  <button type="button" class="btn btn-success">Log In</button>
-                </Link>
+              
+                  <button type="button" class="btn btn-success" onClick={handleLoginClick}>Log In</button>
+                
               </li>
             </ul>
           </div>
