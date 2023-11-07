@@ -12,7 +12,7 @@ export default function ContactUs() {
             <h2 className="section-summary">Need information? Fill out the form and send us a message.</h2>
             <form
               id="cont"
-              action="https://formsubmit.co/info@researchelite.co.in" 
+              action="https://formsubmit.co/info.researchelite.in" 
               method="POST"
               className="contact-form"
             >
