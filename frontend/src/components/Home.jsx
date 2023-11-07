@@ -1,14 +1,24 @@
 import React from "react";
 import QRCode from "../images/qrcode.png";
 import user from "../images/user.png"
+import Services from "./Services";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../App.css';
 import Projects from "./Projects";
+import { useLocation } from 'react-router-dom';
+import HeadBg from './HeadBg';
 
 export default function Home() {
+
+  const location = useLocation();
+  
+  // Determine if the current route is the home page ("/")
+  const isHomePage = location.pathname === '/';
+
   return (
     <>
+      <HeadBg isHomePage={isHomePage} />;
       <button
         type="button"
         className="btn btn-success my-0 fixed-left rotated-btn"
@@ -48,9 +58,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+      <Services showAlgoServices={false} />
       <Projects />
-      <div className="container mt-5">
+      <div className="container">
         <h1 className=" text-center container mt-5">Testimonials</h1>
 
         <Carousel
