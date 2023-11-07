@@ -118,14 +118,14 @@ export default function Footer() {
                   <li className="d-flex">
                   <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="phone"/>
                     <p>
-                      <i className="fas fa-phone pe-2"></i>+ 91 7067339330 
+                      <i className="fas fa-phone pe-2"></i>+ 91-8959001774 
                     </p>
                   </li>
                   <li className="d-flex">
                   <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="new-post"/>
                     <p>
                       <i className="fas fa-envelope pe-2 mb-0"></i>
-                      researchelite19@gmail.com
+                      info@researchelite.in
                     </p>
                   </li>
                 </ul>
