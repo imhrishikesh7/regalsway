@@ -22,7 +22,7 @@ export default function Home() {
       <div className="container Banner-summery">
         <h4>RESEARCH ELITE</h4> 
         <h1>Automated share trading platform.</h1>
-        <p>Richway is always better than manual trading. Richway is fully automatic trading without any manual intervention. Our web-based Richway terminal<br/> works with the leading brokers of India who those are providing facilities of API based trading.</p>
+        <p>Researchelite is always better than manual trading. Researchelite is fully automatic trading without any manual intervention. Our web-based Researchelite terminal<br/> works with the leading brokers of India who those are providing facilities of API based trading.</p>
       </div>
 
       <div
