@@ -1,33 +1,30 @@
 import BgImage from '../images/plexus_bg.jpg';
 import React from 'react';
 import '../App.css';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-export default function HeadBg({ isHomePage }) {
-  // const location = useLocation();
+export default function HeadBg() {
+  const location = useLocation();
+  // Determine if the current route is the home page ("/")
+  const isHomePage = location.pathname === '/';
 
   const particlesInit = async (main) => {
     console.log(main);
     await loadFull(main);
   };
-
+  const containerStyle = {
+    height: isHomePage ? '100vh' : '50vh',
+    width: "100%",
+    objectFit: "cover",
+    filter: "brightness(0.4)",
+    background: `url(${BgImage}) center / cover no-repeat`,
+  };
   return (
-    <div style={{ position: 'relative', height: isHomePage ? '90vh' : '50vh' }}>
+    <div>
       {/* Header Banner */}
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          objectFit: 'cover',
-          filter: 'brightness(0.4)',
-          marginTop: '0',
-          background: `url(${BgImage})  center / cover no-repeat `,
-        //   position: 'relative', height: isHomePage ? '90vh' : '400px'
-          //   position: 'relative',
-        }}
-      >
+      <div style={containerStyle}>
         {/* <h3
             position: 'absolute',
             bottom: '20px', // Adjust this value to set the margin below the text

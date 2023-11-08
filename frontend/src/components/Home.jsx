@@ -1,24 +1,15 @@
 import React from "react";
 import QRCode from "../images/qrcode.png";
 import user from "../images/user.png"
-import Services from "./Services";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../App.css';
 import Projects from "./Projects";
-import { useLocation } from 'react-router-dom';
-import HeadBg from './HeadBg';
 
-export default function Home() {
-
-  const location = useLocation();
-  
-  // Determine if the current route is the home page ("/")
-  const isHomePage = location.pathname === '/';
-
+export default function Home() {  
   return (
     <>
-      <HeadBg isHomePage={isHomePage} />;
+
       <button
         type="button"
         className="btn btn-success my-0 fixed-left rotated-btn"
@@ -27,6 +18,12 @@ export default function Home() {
       >
         Quick Payment
       </button>
+      
+      <div className="container Banner-summery">
+        <h4>RESEARCH ELITE</h4> 
+        <h1>Automated share trading platform.</h1>
+        <p>Richway is always better than manual trading. Richway is fully automatic trading without any manual intervention. Our web-based Richway terminal<br/> works with the leading brokers of India who those are providing facilities of API based trading.</p>
+      </div>
 
       <div
         className="modal modal-sm fade h-60"
@@ -58,7 +55,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Services showAlgoServices={false} />
+      
       <Projects />
       <div className="container">
         <h1 className=" text-center container mt-5">Testimonials</h1>
