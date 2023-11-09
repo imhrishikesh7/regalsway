@@ -18,7 +18,6 @@
 
 .navbar2 {
   background-color: transparent;
-  border-bottom: 1px solid white;
   margin: 0 auto;
   padding: 4px;
   width: 75%; /* Set the width to 100% to fill the entire navbar */
@@ -422,17 +421,9 @@ a {
     flex-direction: column;
     align-items: center;
     border: 1px solid white;
-    width: fit-content;
+    width: 100%;
     margin: 0;
     box-sizing: border-box;
-  }
-  .navbar .navbar2{
-    width: fit-content;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-    box-sizing: border-box;
-
   }
   .navbar .collapse .container{
     background: #131313;
