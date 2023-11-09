@@ -3,11 +3,7 @@ import React from "react";
 import '../App.css';
 
 export default function Footer() {
-    let footerStyle1={
-        width: "150px",
-        height: "150px"
-        
-     }
+    
     let footerStyle2={
         backgroundColor: "black"
     }
@@ -19,12 +15,12 @@ export default function Footer() {
     <div>
       <div className=" mt-5">
         <footer className="bg-dark text-center text-lg-start text-white">
-          <div className="container p-4">
+          <div className="footercontainer container p-4">
             <div className="row my-4">
               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <div
                   className="rounded-circle my-5 bg-dark d-flex align-items-center justify-content-center mb-4 mx-0"
-                  style={footerStyle1}
+                  
                 >
                   <img
                     className=""
@@ -96,7 +92,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div class="col-lg-3 col-md-4 my-4">
-                            
+                            <h4></h4>
                             <ul class="footer-links">
                              <li className="my-2"> <a href="/">Portfolio</a> </li>
                              <li className="my-2"> <a href="/"> Privacy Policy</a></li>
@@ -109,23 +105,22 @@ export default function Footer() {
 
                 <ul className="list-unstyled">
                   <li className="d-flex">
-                  <img width="20" height="20" src="https://img.icons8.com/sf-ultralight-filled/25/FFFFFF/visit.png" alt="visit"/>
+                  <img width="25" height="25" src="https://img.icons8.com/sf-ultralight-filled/25/FFFFFF/visit.png" alt="visit"/>
                     <p>
-                      <i className="fas fa-map-marker-alt pe-2"></i>Research Elite office, 
+                      Research Elite office,
                       Vijay nagar, Indore
                     </p>
                   </li>
                   <li className="d-flex">
-                  <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="phone"/>
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="phone"/>
                     <p>
-                      <i className="fas fa-phone pe-2"></i>+ 91-8959001774 
+                      + 91-8959001774 
                     </p>
                   </li>
                   <li className="d-flex">
-                  <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="new-post"/>
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="new-post"/>
                     <p>
-                      <i className="fas fa-envelope pe-2 mb-0"></i>
-                      info@researchelite.in
+                       info@researchelite.in
                     </p>
                   </li>
                 </ul>

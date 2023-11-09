@@ -1,18 +1,18 @@
 import React from 'react';
+import '../App.css';
 
 export default function SebiCircular() {
   return (
-    <>
-    <div className="container mt-5">
-      <h1 className="text-center mt-5">SEBI Circular for Algorithm Companies</h1>
-      <h2 className="mt-4 text-center">SEBI/HO/MIRSD/DOP/P/CIR/2022/117</h2>
+    <div className="sebicontainer container mt-5">
+      <h1 className="text-center mt-4">SEBI Circular for Algorithm Companies</h1>
+      <h2 className="mt-3 text-center">SEBI/HO/MIRSD/DOP/P/CIR/2022/117</h2>
       <p className="text-justify">
         We follow all the rules laid down by SEBI. We do not deceive anyone with promises of huge profits. You can trade using the software provided by us. You don't need to watch the market all day. You can set limits, after which automatic trading will continue in your account, and your profits and losses will be visible at the end of the day. We have integrated all SEBI protocols on the website and in the documents to provide customers with all the information before entering into an agreement with us. We believe in transparency and don't trick anyone into becoming a customer. All our agents are NISM certified.
       </p>
-      <h3 className="text-primary">SEBI CIRCULAR</h3>
-      <p className="text-primary">September 02, 2022</p>
+      <h3 className="text-primary text-center">SEBI CIRCULAR</h3>
+      <p className="text-primary text-center">September 02, 2022</p>
 
-      <ol className="text-justify">
+      <ol className="container-fluid">
         <li>
           It has come to the notice of the Securities and Exchange Board of India (SEBI) that some unregulated platforms are offering algorithmic trading services/strategies to investors for automated execution of trades. Such services and strategies are being marketed with “claims” of high returns on investment. Further, “ratings” have been assigned to the strategies, which could lead to investors being lured by such claims. This may amount to mis-selling of such services and strategies to investors.
         </li>
@@ -55,6 +55,6 @@ export default function SebiCircular() {
         </li>
       </ol>
     </div>
-    </>
   );
 }
+ 
