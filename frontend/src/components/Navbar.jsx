@@ -51,16 +51,16 @@ export default function Navbar() {
             </button>
             <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
               <div className="container">
-                <ul className="navbar-nav text-center ul mb-2 mb-lg-0 fs-6 opacity-100">
+                <ul className="navbar-nav text-center ul mb-2 mb-lg-0 opacity-100">
                   <li className="nav-item hov mx-2">
                     <Link
                       className="nav-link"
                       aria-current="page"
                       to="/"
                       onClick={closeMobileMenu}
-                      style={{ color: "white" }}
+                      style= {{ color: "white" }}
                     >
-                      Home
+                      HOME
                     </Link>
 
                   </li>
@@ -72,12 +72,12 @@ export default function Navbar() {
                       onClick={closeMobileMenu}
                       style={{ color: "white" }}
                     >
-                      About
+                      ABOUT US
                     </Link>
                   </li>
-                  <li className="nav-item hov dropdown mx-2">
-                    <button className="btn dropdown-toggle fs-6" data-bs-toggle="dropdown" style={{ color: "white", padding: "8px" }} aria-expanded="false">
-                      Services
+                  <li className="nav-item hov dropdown mx-2 ">
+                    <button className="btn dropdown-toggle " data-bs-toggle="dropdown" style={{ color: "white", fontSize: "small", margin: "0"}} aria-expanded="false">
+                      SERVICES
                     </button>
                     <ul className="dropdown-menu dropdown-menu-dark">
                       <li>
@@ -88,7 +88,7 @@ export default function Navbar() {
                           onClick={closeMobileMenu}
                           style={{ color: "white" }}
                         >
-                          IT Services
+                          IT SERVICES
                         </Link>
                       </li>
                       <li>
@@ -99,7 +99,7 @@ export default function Navbar() {
                           onClick={closeMobileMenu}
                           style={{ color: "white" }}
                         >
-                          Algo Services
+                          ALGO SERVICES
                         </Link>
                       </li>
                     </ul>
@@ -112,7 +112,7 @@ export default function Navbar() {
                       onClick={closeMobileMenu}
                       style={{ color: "white" }}
                     >
-                      Pricing
+                      PRICING
                     </Link>
                   </li>
                   <li className="nav-item hov mx-2">
@@ -123,7 +123,7 @@ export default function Navbar() {
                       onClick={closeMobileMenu}
                       style={{ color: "white" }}
                     >
-                      Sebi Cricular
+                      SEBI CIRCULAR
                     </Link>
                   </li>
 
@@ -135,12 +135,12 @@ export default function Navbar() {
                       onClick={closeMobileMenu}
                       style={{ color: "white" }}
                     >
-                      Contact Us
+                      CONTACT US
                     </Link>
                   </li>
                   <li className="nav-item mx-2">
 
-                    <button type="button" class="btn btn-success" onClick={handleLoginClick}>Log In</button>
+                    <button type="button" className="btn btnlogin " onClick={handleLoginClick}>LOGIN</button>
 
                   </li>
                 </ul>

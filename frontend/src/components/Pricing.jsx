@@ -83,37 +83,63 @@ export default function Pricing() {
       <div className="row justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-4">
           <Card
-            title="BASIC"
-            amount={10000}
-            theme="green"
+            title="MONTHLY PACKAGE"
+            subtitle="Monthly"
+            amount={13000}
             checkoutHandler={() => checkoutHandler(10000)}
-            items={["Monthly Plan", "Valid For A Month"]}
+            items={[
+                    "Completely Automated",
+                    "Trades Indices",
+                    "WhatsApp Support",
+                    "Remote Support",
+                    "1 Strategy (1/Month)",
+                  ]}
           />
         </div>
         <div className="col-sm-6 col-md-4 col-lg-4">
           <Card
-            title="SILVER"
-            amount={25000}
-            theme="blue"
+            title="QUARTERLY PACKAGE"
+            subtitle="Quarterly"
+            amount={27000}
             checkoutHandler={() => checkoutHandler(25000)}
-            items={["Quarterly Plan", "Valid For 3 Months"]}
+            items={[
+              "Completely Automated",
+              "Trades Indices",
+              "WhatsApp Support",
+              "Remote Support",
+              "3 Strategy (1/Month)",
+            ]}
           />
         </div>
         <div className="col-sm-6 col-md-4 col-lg-4">
           <Card
-            title="GOLDEN"
+            title="HALF YEARLY PACKAGE"
+            subtitle="Half Yearly"
+            
             amount={45000}
-            theme="gold"
             checkoutHandler={() => checkoutHandler(45000)}
-            items={["Half Yearly Plan", "Valid For 6 Months"]}
+            items={[
+              "Completely Automated",
+              "Trades Indices",
+              "WhatsApp Support",
+              "Remote Support",
+              "6 Strategy (1/Month)",
+            ]}
           />
         </div>
         <div className="col-sm-6 col-md-4 col-lg-4">
           <Card
-            title="PLATINUM"
-            amount={80000}
+            title="YEARLY PACKAGE"
+            subtitle="Yearly"
+            amount={88000}
             checkoutHandler={() => checkoutHandler(80000)}
-            items={["Yearly Plan", "Valid For An Year"]}
+            items={[
+              "Completely Automated",
+              "Trades Indices",
+              "WhatsApp Support",
+              "Remote Support",
+              "12 Strategy (1/Month)",
+            ]}
           />
 
         </div>
@@ -123,7 +149,7 @@ export default function Pricing() {
         <Modal.Header closeButton>
           {/* <Modal.Title>Enter Your Details</Modal.Title> */} 
           {/* Replace the below title later */}
-          <Modal.Title>Regalsway</Modal.Title>
+          <Modal.Title>Researchelite</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/* <form>

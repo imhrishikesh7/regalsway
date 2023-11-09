@@ -22,7 +22,7 @@ export default function HeadBg() {
     background: `url(${BgImage}) center / cover no-repeat`,
   };
   return (
-    <div>
+    <div >
       {/* Header Banner */}
       <div style={containerStyle}>
         {/* <h3
@@ -35,7 +35,7 @@ export default function HeadBg() {
         >
           Research Elite {location.pathname}
         </h3> */}
-      {/* Particles */}
+      {/* Particles */} 
       <Particles
         id="tsparticles"
         init={particlesInit}
