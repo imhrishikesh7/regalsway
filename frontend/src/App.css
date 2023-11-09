@@ -2,6 +2,8 @@
 .navbar {
   background-color: transparent;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: small; 
 }
 
 .navbar .container-fluid {
@@ -34,6 +36,7 @@
 /* Adjust the margin for the nav items to create space */
 .navbar .navbar-collapse ul {
   margin: 0;
+  font-size: small;
 }
 
   
@@ -63,7 +66,7 @@
   right: 0;
   margin: 0 auto;
   content: "";
-  background-color: #fff;
+  background-color: #25d06f;
   width: 0%;
   height: 2px;
   transition: all 0.5s;
@@ -71,6 +74,12 @@
 .navbar .navbar-nav .hov:hover::after,
 .navbar .navbar-nav .hov.show::after {
   width: 80%;
+}
+.navbar .btnlogin{
+  background: #25d06f;
+  color: #fff;
+  border-radius: 0;
+  font-size: small
 }
 .carousel-root {
   width: 64% !important;
@@ -446,7 +455,7 @@ a {
 
   .navbar .navbar-nav {
     flex-direction: column;
-  }
+    }
 
   .navbar .nav-item:last-child {
     margin-bottom: 20px;
@@ -464,7 +473,7 @@ a {
 
   .navbar-toggler-icon {
     cursor: pointer;
-  color: #fff;
+    color: #fff;
     font-size: 24px;
     margin: 5px;
   }
