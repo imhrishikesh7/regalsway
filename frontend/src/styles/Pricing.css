@@ -1,86 +1,107 @@
-.box{
+.box {
     width: 100%;
-
-}
-.pricingTable{
-    color: #666;
-    background: radial-gradient(#fff,#eee);
-    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .pricingTable {
+    color: black;
+    background: #fff;
+    border: 1px solid lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    align-items: center;
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 10px;
     padding: 0 0 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.pricingTable .pricingTable-header{ padding: 18px 0 5px; }
-.pricingTable .title{
-    color: #263C5C;
-    font-size: 30px;
+    width: 360px;
+    height: 500px;
+    transition: all 0.5s; /* Add transition for smooth effect */
+  }
+  
+  .pricingTable:hover {
+    background-color: #25d06f; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+  }
+  
+  .pricingTable .pricingTable-header {
+    padding: 18px 0 5px;
+    color: inherit; /* Inherit text color from parent on hover */
+  }
+  
+  .pricingTable .title {
+    color: inherit; /* Inherit text color from parent on hover */
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0 0 25px;
+    margin-top: 25px;
+  }
+  .pricingTable .subtitle {
+    color: gray; /* Inherit text color from parent on hover */
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.5s; /* Add transition for smooth effect */
 }
-.pricingTable .price-value{
-    color: #fff;
-    background: linear-gradient(to right,#B231EA,#7734EE);
+  .pricingTable:hover .subtitle {
+    color: #dee2e6;
+  }
+  .pricingTable .price-value {
+    font-size: larger;
+    font-weight: lighter;
     padding: 2px 30px 2px;
-    margin: 0 0 15px; 
-    border-radius: 10px;
+    margin: 0 0 15px;
     display: inline-block;
-}
-.pricingTable .price-value .amount{
-    font-size: 30px;
-    font-weight: 600;
+  }
+  
+  .pricingTable .price-value .amount {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #25d06f;
+    font-size: 50px;
+    font-weight: 300;
     line-height: 57px;
-}
-.pricingTable .pricing-content{
-    text-align: left;
+    transition: all 0.5s; /* Add transition for smooth effect */
+
+  }
+  .pricingTable:hover .price-value .amount {
+    color: white; 
+  }
+  .pricingTable .pricing-content {
+    text-align: center;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 10px;
     list-style: none;
     display: inline-block;
-}
-.pricingTable .pricing-content li{
-    font-size: 16px;
+  }
+  
+  .pricingTable .pricing-content li {
+    font-size: 14px;
     line-height: 30px;
-    padding: 0 10px 0 28px;
+    padding: 0 10px 0 10px;
     margin: 0 0 10px;
     position: relative;
-}
-.pricingTable .pricing-content li:last-child{ margin: 0; }
-.pricingTable .pricing-content li:before{
-    content: "";
-    background: linear-gradient(to right,#B231EA,#7734EE);
-    height: 15px;
-    width: 15px;
-    border-radius: 3px;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 11px;
-    left: 0;
-}
-.pricingTable .pricing-content li.disable:before{ display: none; }
-.pricingTable .pricingTable-signup button{
-    color: #fff;
-    background: linear-gradient(to right,#4A63A6,#2C3B6A);
-    font-size: 20px;
-    font-weight: 700;
+  }
+  
+  .pricingTable .pricingTable-signup button {
+    color: black; /* Change button text color on hover */
+    background-color: white; /* Change button background color on hover */
+    border: 1px solid lightgrey; /* Change button border color on hover */
+    font-size: 14px;
     text-transform: capitalize;
-    padding: 8px 25px 10px;
-    border-radius: 50px;
+    padding: 10px 20px;
     display: inline-block;
-    transition: all 0.3s;
-}
-.pricingTable .pricingTable-signup button:hover{ text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5); }
-.pricingTable.blue .price-value,
-.pricingTable.blue .pricing-content li:before{ background: linear-gradient(to right,#48CDED,#5151EC); }
-.pricingTable.green .price-value,
-.pricingTable.green .pricing-content li:before{ background: linear-gradient(to right,#B1D075,#20AB74); }
-.pricingTable.gold .price-value,
-.pricingTable.gold .pricing-content li:before{ background: linear-gradient(to right,#fae73e,#f67437); }
+    transition: all 0.3s; /* Add transition for smooth effect */
+    margin-top: 15px;
+  }
+  
+  .pricingTable:hover .pricingTable-signup button {
+    background-color: #25d06f; /* Change button background color back on hover out */
+    color: white; /* Change button text color back on hover out */
+    border: 1px solid white; /* Change button border color back on hover out */
+  }
+  .pricingTable .pricingTable-signup button:hover {
+    color: #25d06f; /* Change button text color on hover */
+    background-color: white; /* Change button background color on hover */
+    border: 1px solid white; /* Change button border color on hover */
+  } 
 @media only screen and (max-width: 990px){
     .pricingTable{ margin: 0 0 40px; }
 }
