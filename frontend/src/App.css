@@ -420,7 +420,6 @@ a {
    .navbar {
     flex-direction: column;
     align-items: center;
-    border: 1px solid white;
     width: 100%;
     margin: 0;
     box-sizing: border-box;
@@ -428,9 +427,13 @@ a {
   .navbar .collapse .container{
     background: #131313;
     position: absolute;
-    left: 50%;
-    width: fit-content;
+    left: 5%;
+    top: 80%;
+    width: 90%;
+    margin: 0 90px 0 0;
+    padding: 4px;
   }
+ 
   .dropdown {
     position: static;
   }
@@ -450,6 +453,24 @@ a {
 
   .navbar .nav-item:last-child {
     margin-bottom: 20px;
+  }
+  .navbar .nav-item {
+    text-align: left; 
+  }
+  /* .navbar .nav-item .hov{
+    text-align: left; 
+    margin: 0;
+    display: block;
+    padding: 0;
+  } */
+  li.nav-item.hov.dropdown{
+    margin: 0;
+    padding: 8px 0;
+  }
+  button.btn.dropdown-toggle{
+    /* text-align:   left;  */
+    margin: 0;
+    padding: 0;
   }
 
   .navbar-toggler {
@@ -472,6 +493,7 @@ a {
   .dropdown.active .dropdown-menu {
     display: block;
     position: static;
+    /* margin-top: 4px; */
   }
 
     /* Apply styles for screens with a maximum width of 768px */
