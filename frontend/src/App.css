@@ -20,7 +20,7 @@
   background-color: transparent;
   margin: 0 auto;
   padding: 4px;
-  width: 75%; /* Set the width to 100% to fill the entire navbar */
+  width: 80%; /* Set the width to 100% to fill the entire navbar */
   display: flex;
   justify-content: space-between; /* Put logo and items at opposite ends */
   align-items: center;
@@ -79,6 +79,11 @@
   color: #fff;
   border-radius: 0;
   font-size: small
+}
+.navbar .btnlogin:hover{
+  border: 1px solid #25d06f;
+  color: #25d06f;
+  background-color: transparent;
 }
 .carousel-root {
   width: 64% !important;
@@ -193,12 +198,32 @@
 .rotated-btn {
   transform: rotate(-90deg);
   position: fixed;
+  background-color: #25d06f;
+  color: #fff;
   left:  0px; /* Adjust the left position as needed for your layout */
   top: 50%; /* Adjust the top position as needed for your layout */
   transform-origin: 0% 0%;
   white-space: nowrap;
   z-index: 99;
 }
+.rotated-btn2 {
+  transform: rotate(-90deg);
+  position: fixed;
+  background-color: #25d06f;
+  color: #fff;
+  left:  0px; /* Adjust the left position as needed for your layout */
+  top: 70%; /* Adjust the top position as needed for your layout */
+  transform-origin: 0% 0%;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+.rotated-btn:hover,
+.rotated-btn2:hover {
+  border: 1px solid #25d06f;
+  color: #25d06f;
+}
+
 
 /* Home page top summery headings */
 .Banner-summery{
@@ -384,8 +409,14 @@ a {
 
   .rotated-btn {
     position: absolute;
-    top: auto;
-    left: auto;
+    top: 90%;
+    left: 50%;
+    transform: none;
+  }
+  .rotated-btn2 {
+    position: absolute;
+    top: 90%;
+    left: 15%;
     transform: none;
   }
 
@@ -521,6 +552,8 @@ a {
       text-align: justify;
     }
 
+    /* Pricing table responsive css */
+    .pricingTable{ margin: 0 0 40px; }
 
     .footercontainer {
       width: fit-content;
