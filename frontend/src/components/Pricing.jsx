@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { Modal, Button } from "react-bootstrap";
-import "../styles/Pricing.css";
 import axios from "axios";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "../styles/Pricing.css";
 
-export default function Pricing() {
+const Pricing = () => {
+  const [selectedAmount, setSelectedAmount] = useState(null);
   const [showForm, setShowForm] = useState(false);
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
     contact: "",
+    remark: "",
   });
-
-  const [selectedAmount, setSelectedAmount] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,39 +24,36 @@ export default function Pricing() {
     }));
   };
 
-  const checkoutHandler = async (amount) => {
-    setShowForm(true);
-    setSelectedAmount(amount);
-  }
 
-  const closeModal = () => {
-    setShowForm(false);
+  
+  const checkoutHandler = (amount) => {
+    setSelectedAmount(amount);
+    setShowForm(true);
   };
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission
-    // Validate the form data
-    if (!userData.name || !userData.email || !userData.contact) {
+    e.preventDefault();
+    if (!userData.name || !userData.email || !userData.contact || !userData.remark || !selectedAmount) {
       alert("Please fill in all fields.");
-      return; // Do not submit the form if any field is empty
+      return;
     }
-    try {
-      const { data: { key } } = await axios.get("http://localhost:4000/api/getKey") //Modify the url wrto the actual server domain.
 
-      const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", { //Modify the url wrto the actual server domain.
+    try {
+      const { data: { key } } = await axios.get("http://localhost:4000/api/payment/getKey");
+      const { data: { order } } = await axios.post("http://localhost:4000/api/payment/checkout", {
         amount: selectedAmount,
-      })
+        user: userData,
+      });
 
       const options = {
         key,
         amount: order.amount,
         currency: "INR",
-        name: "RegalSway",
+        name: "Researchelite",
         description: "Test Transaction",
         image: "../images/second.png",
         order_id: order.id,
-        callback_url: "http://localhost:4000/api/paymentverification",
-        //Modify the url wrto the actual server domain.
+        callback_url: "http://localhost:4000/api/payment/paymentverification",
         prefill: {
           name: userData.name,
           email: userData.email,
@@ -62,154 +61,175 @@ export default function Pricing() {
         },
         notes: {
           address: "Razorpay Corporate Office",
+          user_details: JSON.stringify(userData),
         },
         theme: {
           color: "#3b3b3b",
         },
       };
+
       const razor = new window.Razorpay(options);
       razor.open();
+
+      // After handling Razorpay, proceed with FormSubmit
+      const form = e.target;
+      const formData = new FormData(form);
+
+      await axios.post(form.action, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
     } catch (error) {
       console.error("Error during checkout:", error);
-      // You can handle errors here, such as displaying an error message to the user.
     }
-    closeModal()
-  }
 
+    setShowForm(false);
+  };
 
   return (
-    <div className="container fluid">
-      <h1 className="text-center container mt-5">Our Plans</h1>
-      <div className="row justify-content-center">
-        <div className="col-sm-6 col-md-4 col-lg-4">
-          <Card
-            title="MONTHLY PACKAGE"
-            subtitle="Monthly"
-            amount={13000}
-            checkoutHandler={() => checkoutHandler(10000)}
-            items={[
-                    "Completely Automated",
-                    "Trades Indices",
-                    "WhatsApp Support",
-                    "Remote Support",
-                    "1 Strategy (1/Month)",
-                  ]}
-          />
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-4">
-          <Card
-            title="QUARTERLY PACKAGE"
-            subtitle="Quarterly"
-            amount={27000}
-            checkoutHandler={() => checkoutHandler(25000)}
-            items={[
-              "Completely Automated",
-              "Trades Indices",
-              "WhatsApp Support",
-              "Remote Support",
-              "3 Strategy (1/Month)",
-            ]}
-          />
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-4">
-          <Card
-            title="HALF YEARLY PACKAGE"
-            subtitle="Half Yearly"
-            
-            amount={45000}
-            checkoutHandler={() => checkoutHandler(45000)}
-            items={[
-              "Completely Automated",
-              "Trades Indices",
-              "WhatsApp Support",
-              "Remote Support",
-              "6 Strategy (1/Month)",
-            ]}
-          />
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-4">
-          <Card
-            title="YEARLY PACKAGE"
-            subtitle="Yearly"
-            amount={88000}
-            checkoutHandler={() => checkoutHandler(80000)}
-            items={[
-              "Completely Automated",
-              "Trades Indices",
-              "WhatsApp Support",
-              "Remote Support",
-              "12 Strategy (1/Month)",
-            ]}
-          />
-
-        </div>
-      </div>
-
-      <Modal show={showForm} onHide={closeModal}>
-        <Modal.Header closeButton>
-          {/* <Modal.Title>Enter Your Details</Modal.Title> */} 
-          {/* Replace the below title later */}
-          <Modal.Title>Researchelite</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {/* <form>
-          
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">
-                Name:
-              </label>
-              <input
+    <div className="container">
+      {!showForm && (
+        <>
+          <h1 className="text-center container mt-5">Our Plans</h1>
+          <div className="row justify-content-center">
+          <div className="col-sm-6 col-md-4 col-lg-4">
+              {/* Render Card component with appropriate props */}
+              <Card
+                title="MONTHLY PACKAGE"
+                subtitle="Monthly"
+                amount={13000}
+                checkoutHandler={() => checkoutHandler(13000)}
+                items={[
+                  "Completely Automated",
+                  "Trades Indices",
+                  "WhatsApp Support",
+                  "Remote Support",
+                  "1 Strategy (1/Month)",
+                ]}
+              />
+            </div>
+            <div className="col-sm-6 col-md-4 col-lg-4">
+              {/* Render Card component with appropriate props */}
+              <Card
+                title="QUARTERLY PACKAGE"
+                subtitle="Quarterly"
+                amount={27000}
+                checkoutHandler={() => checkoutHandler(27000)}
+                items={[
+                  "Completely Automated",
+                  "Trades Indices",
+                  "WhatsApp Support",
+                  "Remote Support",
+                  "3 Strategy (1/Month)",
+                ]}
+              />
+            </div>
+            <div className="col-sm-6 col-md-4 col-lg-4">
+              {/* Render Card component with appropriate props */}
+              <Card
+                title="HALF YEARLY PACKAGE"
+                subtitle="Half Yearly"
+                amount={45000}
+                checkoutHandler={() => checkoutHandler(45000)}
+                items={[
+                  "Completely Automated",
+                  "Trades Indices",
+                  "WhatsApp Support",
+                  "Remote Support",
+                  "6 Strategy (1/Month)",
+                ]}
+              />
+            </div>
+            <div className="col-sm-6 col-md-4 col-lg-4">
+              {/* Render Card component with appropriate props */}
+              <Card
+                title="YEARLY PACKAGE"
+                subtitle="Yearly"
+                amount={88000}
+                checkoutHandler={() => checkoutHandler(88000)}
+                items={[
+                  "Completely Automated",
+                  "Trades Indices",
+                  "WhatsApp Support",
+                  "Remote Support",
+                  "12 Strategy (1/Month)",
+                ]}
+              />
+            </div>          
+          </div>
+        </>
+      )}
+      {showForm && (
+        <div className="pricing-form">
+          <h1 className="text-center my-5">Checkout Form</h1>
+          <Form onSubmit={handleFormSubmit} >
+            <Form.Group controlId="amount" className="mb-3">
+              <Form.Label>Amount:</Form.Label>
+              <Form.Control
                 type="text"
-                id="name"
+                name="amount"
+                value={`${selectedAmount}`}
+                onChange={handleChange}
+                readOnly
+                disabled
+              />
+              <p>*18% GST and 2% transaction fee included</p>
+            </Form.Group>
+
+            <Form.Group controlId="name" className="mb-3">
+              <Form.Label>Your Name:</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Name Surname"
                 name="name"
                 value={userData.name}
                 onChange={handleChange}
-                className="form-control"
-                required
               />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email:
-              </label>
-              <input
+            </Form.Group>
+
+            <Form.Group controlId="email" className="mb-3">
+              <Form.Label>Your E-mail:</Form.Label>
+              <Form.Control
                 type="email"
-                id="email"
+                placeholder="example@email.com"
                 name="email"
                 value={userData.email}
                 onChange={handleChange}
-                className="form-control"
-                required
               />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="contact" className="form-label">
-                Contact:
-              </label>
-              <input
+            </Form.Group>
+
+            <Form.Group controlId="contact" className="mb-3">
+              <Form.Label>Your Mobile Number:</Form.Label>
+              <Form.Control
                 type="tel"
-                id="contact"
+                placeholder="XXX XXX XXXX"
                 name="contact"
                 value={userData.contact}
                 onChange={handleChange}
-                className="form-control"
-                required
               />
-            </div>
-          </form> */}
-          {/* later delete the heading and p below and uncomment the above form */}
-        <h2>Page under construction</h2>
-        <p>Contact regalsway pvt. ldt. for more queries through our contact section, sorry for inconvinience, payments section is under construction. Stay tuned for updates.</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={closeModal}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleFormSubmit}>
-            Submit
-          </Button>
-        </Modal.Footer>
-      </Modal>
+            </Form.Group>
+
+            <Form.Group controlId="remark" className="mb-3">
+              <Form.Label>Add Remark:</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Remark"
+                name="remark"
+                value={userData.remark}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Button type="submit" variant="success" className="mt-3">
+              CHECKOUT
+            </Button>
+          </Form>
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default Pricing;

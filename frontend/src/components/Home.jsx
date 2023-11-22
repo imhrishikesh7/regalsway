@@ -1,5 +1,6 @@
 import React from "react";
 import QRCode from "../images/qrcode.png";
+import ISOCertificate from "../images/iso-certificate.jpg";
 import user from "../images/user.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -12,11 +13,19 @@ export default function Home() {
 
       <button
         type="button"
-        className="btn btn-success my-0 fixed-left rotated-btn"
+        className="btn my-0 fixed-left rotated-btn"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
         Quick Payment
+      </button>
+      <button
+        type="button"
+        className="btn my-0 fixed-left rotated-btn2"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal2"
+      >
+        ISO Certificate
       </button>
       
       <div className="container Banner-summery">
@@ -56,7 +65,34 @@ export default function Home() {
         </div>
       </div>
       
-      <Projects />
+      <div
+        className="modal modal-lg fade h-60"
+        id="exampleModal2"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog ">
+          <div className="modal-content">
+            <div className="modal-header">
+            <h1 className="modal-title fs-5" id="exampleModalLabel">
+                ISO Certificate
+            </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body  p-2">
+              <img className="img-fluid " src={ISOCertificate} style={{width: ""}} alt="" srcSet="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <Projects/>
       <div className="container">
         <h1 className=" text-center container mt-5">Testimonials</h1>
 

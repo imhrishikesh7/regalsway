@@ -11,6 +11,7 @@ export default function PaymentSuccess() {
     <div className='container-fluid  text-center'>
         <img className='img-fluid' src={SuccessImg} alt="" srcSet="" />
         <p>Reference no: {referenceNum} </p>
+        <p>Our team will contact you soon!</p>
     </div>
   )
 }

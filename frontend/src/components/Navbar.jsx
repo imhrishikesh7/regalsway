@@ -58,7 +58,7 @@ export default function Navbar() {
                       aria-current="page"
                       to="/"
                       onClick={closeMobileMenu}
-                      style= {{ color: "white" }}
+                      style={{ color: "white" }}
                     >
                       HOME
                     </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li className="nav-item hov dropdown mx-2 ">
-                    <button className="btn dropdown-toggle " data-bs-toggle="dropdown" style={{ color: "white", fontSize: "small", margin: "0"}} aria-expanded="false">
+                    <button className="btn dropdown-toggle " data-bs-toggle="dropdown" style={{ color: "white", fontSize: "small", margin: "0" }} aria-expanded="false">
                       SERVICES
                     </button>
                     <ul className="dropdown-menu dropdown-menu-dark">
@@ -103,6 +103,18 @@ export default function Navbar() {
                         </Link>
                       </li>
                     </ul>
+                  </li>
+                  <li className="nav-item hov mx-2">
+                    <Link
+                      className="nav-link"
+                      aria-current="page"
+                      to="https://rzp.io/l/MmTRy9l3B"
+                      target="_blank"
+                      onClick={closeMobileMenu}
+                      style={{ color: "white" }}
+                    >
+                      PAYMENT
+                    </Link>
                   </li>
                   <li className="nav-item hov mx-2">
                     <Link
