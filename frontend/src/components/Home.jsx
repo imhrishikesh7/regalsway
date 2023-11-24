@@ -61,6 +61,7 @@ export default function Home() {
                 <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account No:</b> 50200085442068</p>
                 <p className="align-middle border border-secondary bg-light rounded p-2"><b>IFSC Code:</b> HDFC0003886</p>
                 <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account Type:</b> CURRENT</p>
+                <p className="align-middle border border-secondary bg-light rounded p-2"><b>UPI ID:</b> researchelite.23@ybl</p>
               </div>
             </div>
           </div>
