@@ -1,5 +1,5 @@
 import React from "react";
-import QRCode from "../images/qrcode.png";
+import QRCode from "../images/qrcode.jpg";
 import ISOCertificate from "../images/iso-certificate.jpg";
 import user from "../images/user.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -55,10 +55,12 @@ export default function Home() {
               ></button>
             </div>
             <div className="modal-body  p-2">
-              <img className="img-fluid " src={QRCode} alt="" srcSet="" />
+              <img className="img-fluid " src={QRCode} style={{objectFit:"cover"}} alt="" srcSet="" />
               <div className="container-fluid my-2">
-                <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account No:</b> 1987070720232727</p>
-                <p className="align-middle border border-secondary bg-light rounded p-2"><b>IFSC Code:</b> AUBL0002537</p>
+                <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account Holder:</b> RESEARCH ELITE INFOTECH</p>
+                <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account No:</b> 50200085442068</p>
+                <p className="align-middle border border-secondary bg-light rounded p-2"><b>IFSC Code:</b> HDFC0003886</p>
+                <p className="align-middle border border-secondary bg-light rounded p-2"><b>Account Type:</b> CURRENT</p>
               </div>
             </div>
           </div>
